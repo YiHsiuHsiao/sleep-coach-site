@@ -1,84 +1,272 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>嬰幼兒睡眠顧問 - [許立懿]</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>嬰幼兒睡眠訓練師 - [許立懿]</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f9f9f9; }
-    header { background: #f2b4b4; color: white; padding: 1em; text-align: center; }
-    section { padding: 2em; max-width: 800px; margin: auto; background: white; margin-bottom: 1em; border-radius: 8px; }
-    h1, h2 { color: #c04c4c; }
-    nav { text-align: center; margin-bottom: 1em; }
-    nav a { margin: 0 1em; text-decoration: none; color: #c04c4c; }
-    .testimonial { background: #fdf2f2; padding: 1em; margin-bottom: 1em; border-left: 4px solid #c04c4c; }
-    form input, form textarea { width: 100%; padding: 0.5em; margin-bottom: 1em; }
-    form button { background: #c04c4c; color: white; border: none; padding: 0.5em 1em; cursor: pointer; }
-    footer { text-align: center; padding: 1em; background: #f2b4b4; color: white; }
+    body {
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+      background: #fafafa;
+    }
+    h1, h2 {
+      color: #6a1b9a;
+      text-align: center;
+    }
+    /* 關於我區塊 */
+    #about {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    #about img {
+      width: 66vw;
+      max-width: 800px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+    #about p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    /* 時間軸 */
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+      padding-left: 60px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #6a1b9a;
+      border-radius: 2px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 50px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      width: 20px;
+      height: 20px;
+      background: #6a1b9a;
+      border-radius: 50%;
+      top: 0;
+    }
+    .timeline-item h3 {
+      margin: 0 0 5px 0;
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #4b007b;
+    }
+    .timeline-item p {
+      margin: 0;
+      color: #555;
+    }
+    /* 其他區塊 */
+    section {
+      margin-bottom: 50px;
+    }
+    /* 個案經驗、家長回饋、服務方案 */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #6a1b9a;
+    }
+    /* 連絡表單 */
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #4b007b;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 5px;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+      font-family: inherit;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button {
+      margin-top: 20px;
+      background: #6a1b9a;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+    button:hover {
+      background: #4b007b;
+    }
+    /* 響應式 */
+    @media (max-width: 600px) {
+      #about img {
+        width: 90vw;
+      }
+      .timeline {
+        padding-left: 40px;
+      }
+      .timeline::before {
+        left: 20px;
+      }
+      .timeline-item {
+        padding-left: 40px;
+      }
+      .timeline-item::before {
+        left: 20px;
+        width: 16px;
+        height: 16px;
+      }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>嬰幼兒睡眠顧問 - [許立懿]</h1>
-  <nav>
-    <a href="#about">關於我</a>
-    <a href="#cases">個案經驗</a>
-    <a href="#feedback">家長回饋</a>
-    <a href="#services">服務方案</a>
-    <a href="#contact">聯絡我</a>
-  </nav>
-</header>
+  <h1>[許立懿] 嬰幼兒睡眠訓練師</h1>
 
-<section id="home">
-  <img src="美好時光-686.jpg" alt="[你老婆的名字]" style="width:100%; max-height:400px; object-fit:cover; border-radius:8px;">
-  <p>專業嬰幼兒睡眠顧問，幫助家庭建立健康的睡眠習慣。</p>
-</section>
+  <section id="about">
+    <h2>關於我</h2>
+    <img src="美好時光-686.jpg" alt="[你老婆的名字] 的照片" />
+    <p>
+      我是 [許立懿]，一位擁有政治大學臨床心理師背景的嬰幼兒睡眠顧問。曾於台大心理中心擔任臨床心理師，累積豐富的親子與嬰幼兒心理經驗。亦曾在《親子天下》發表專欄文章，分享育兒與睡眠技巧，幫助更多家庭建立健康的睡眠習慣。
+    </p>
+    <img src="certificate.jpg" alt="證書" style="max-width: 300px; display: block; margin: 20px auto;" />
+  </section>
 
-<section id="about">
-  <h2>關於我</h2>
-  <p>[簡短自我介紹，描述背景、證書、為什麼從事這份工作]</p>
-  <img src="certificate.jpg" alt="證書" style="width:100%; max-width:300px;">
-</section>
+  <section id="education">
+    <h2>就學經歷</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>台灣大學 臨床心理學系碩士</h3>
+        <p>2012 - 2015</p>
+      </div>
+      <div class="timeline-item">
+        <h3>台灣大學 心理學系學士</h3>
+        <p>2008 - 2012</p>
+      </div>
+    </div>
+  </section>
 
-<section id="cases">
-  <h2>個案經驗</h2>
-  <h3>案例 1：夜醒困擾</h3>
-  <p>問題：孩子晚上頻繁夜醒。<br>解決方案：建立作息與安撫策略。<br>結果：成功睡過夜。</p>
-  <h3>案例 2：入睡困難</h3>
-  <p>問題：難以自行入睡。<br>解決方案：漸進式入睡訓練。<br>結果：獨立入睡。</p>
-</section>
+  <section id="work-experience">
+    <h2>工作經歷</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>台大心理中心 臨床心理師</h3>
+        <p>2015 - 2019</p>
+      </div>
+      <div class="timeline-item">
+        <h3>親子天下 專欄作者</h3>
+        <p>2018 - 2023</p>
+      </div>
+    </div>
+  </section>
 
-<section id="feedback">
-  <h2>家長回饋</h2>
-  <div class="testimonial">「終於一覺到天亮，謝謝 [你老婆的名字] 的耐心指導！」 — 王媽媽</div>
-  <div class="testimonial">「孩子從討厭睡覺到愛上睡覺，感謝專業建議！」 — 李爸爸</div>
-</section>
+  <section id="speaking">
+    <h2>演講經歷</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>育兒睡眠工作坊講師</h3>
+        <p>2020 - 現在</p>
+      </div>
+    </div>
+  </section>
 
-<section id="services">
-  <h2>服務方案</h2>
-  <ul>
-    <li>一對一線上諮詢</li>
-    <li>居家觀察與指導</li>
-    <li>客製化睡眠計畫</li>
-    <li>線上課程（即將推出）</li>
-  </ul>
-</section>
+  <section id="publications">
+    <h2>著作</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>《嬰幼兒睡眠全攻略》專欄系列文章</h3>
+        <p>2019 - 2023</p>
+      </div>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>聯絡我</h2>
-  <form>
-    <input type="text" placeholder="您的姓名" required>
-    <input type="email" placeholder="您的 Email" required>
-    <textarea placeholder="請輸入您的訊息"></textarea>
-    <button type="submit">送出</button>
-  </form>
-  <p>或直接聯絡：<br>Email: yourmail@example.com<br>Line: @yourlineid</p>
-</section>
+  <section id="case-experience">
+    <h2>個案經驗</h2>
+    <div class="card">
+      <h3>案例 A - 3 個月嬰兒睡眠改善</h3>
+      <p>透過科學睡眠訓練，成功讓寶寶晚上睡眠延長至 6 小時以上。</p>
+    </div>
+    <div class="card">
+      <h3>案例 B - 1 歲幼兒睡眠習慣建立</h3>
+      <p>幫助家長建立穩定的睡眠儀式，顯著改善孩子入睡困難問題。</p>
+    </div>
+  </section>
 
-<footer>
-  &copy; 2025 嬰幼兒睡眠顧問 [你老婆的名字]
-</footer>
+  <section id="feedback">
+    <h2>家長回饋</h2>
+    <div class="card">
+      <h3>林太太</h3>
+      <p>「感謝[你老婆的名字]老師，讓我們家寶寶終於能一覺到天亮，生活品質大大提升！」</p>
+    </div>
+    <div class="card">
+      <h3>陳先生</h3>
+      <p>「專業又有耐心，提供實用的睡眠方案，孩子變得更快樂，爸媽也輕鬆了。」</p>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>服務方案</h2>
+    <div class="card">
+      <h3>初階睡眠諮詢</h3>
+      <p>提供睡眠習慣評估與個別建議，適合剛開始的家長。</p>
+    </div>
+    <div class="card">
+      <h3>完整睡眠訓練方案</h3>
+      <p>包含多階段跟進及客製化方案，確保孩子持續改善睡眠品質。</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>聯絡我</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <label for="name">姓名</label>
+      <input type="text" id="name" name="name" required />
+      
+      <label for="email">電子郵件</label>
+      <input type="email" id="email" name="_replyto" required />
+      
+      <label for="message">訊息</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">送出</button>
+    </form>
+  </section>
 
 </body>
 </html>
