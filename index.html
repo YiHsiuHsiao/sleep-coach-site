@@ -17,7 +17,6 @@
       color: #6a1b9a;
       text-align: center;
     }
-    /* 關於我區塊 */
     #about {
       text-align: center;
       margin-bottom: 50px;
@@ -31,11 +30,10 @@
     }
     #about p {
       font-size: 1.1em;
-      max-width: 660px;
+      max-width: 720px;
       margin: 0 auto;
       line-height: 1.6;
     }
-    /* 時間軸 */
     .timeline {
       position: relative;
       margin: 40px 0;
@@ -57,7 +55,7 @@
       padding-left: 50px;
     }
     .timeline-item::before {
-      content: none; /* 或直接刪除整個這段 */
+      content: none;
     }
     .timeline-item h3 {
       margin: 0 0 5px 0;
@@ -69,11 +67,9 @@
       margin: 0;
       color: #555;
     }
-    /* 其他區塊 */
     section {
       margin-bottom: 50px;
     }
-    /* 個案經驗、家長回饋、服務方案 */
     .card {
       background: #fff;
       border-radius: 12px;
@@ -85,7 +81,6 @@
       margin-top: 0;
       color: #6a1b9a;
     }
-    /* 連絡表單 */
     form {
       max-width: 600px;
       margin: 0 auto;
@@ -126,7 +121,6 @@
     button:hover {
       background: #4b007b;
     }
-    /* 響應式 */
     @media (max-width: 600px) {
       #about img {
         width: 90vw;
@@ -140,10 +134,31 @@
       .timeline-item {
         padding-left: 40px;
       }
-      .timeline-item::before {
-        left: 20px;
-        width: 16px;
-        height: 16px;
+    }
+
+    /* Custom font size and tighter spacing for education and work experience */
+    #education .timeline-item p {
+      font-size: 1.1em;
+      line-height: 0.05;
+      padding-left: 0px;
+      padding-right: 80px;
+    }
+    #work-experience .timeline-item p {
+      font-size: 1.1em;
+      line-height: 0.05;
+      padding-left: 0px;
+      padding-right: 80px;
+    }
+
+    /* Make credentials under #about section align like education */
+    #about .timeline {
+      text-align: left;
+    }
+    #about .timeline-item p {
+      font-size: 1.1em;
+      line-height: 0.05;
+      padding-left: 0px;
+      padding-right: 80px;
     }
   </style>
 </head>
@@ -151,34 +166,34 @@
 
   <h1>許立懿&nbsp;&nbsp;&nbsp;嬰幼兒睡眠顧問</h1>
 
-  <section id="about">
-    <img src="美好時光-686.jpg" alt="[你老婆的名字] 的照片" />
-    <p>
-      我是許立懿，是臨床心理師、嬰幼兒睡眠顧問、也是三位孩子的媽媽。
-    </p>
-    <p>
-      曾在兒童臨床心理中心擔任心理師，具備嬰幼兒發展評估、親職教養諮詢、以及孕產期/新手父母心理支持的專業知識，也在平時育兒的生活中，持續鍛鍊並累積正向親子互動的技能。期待幫助更多家庭建立健康的睡眠習慣。
-    </p>
+<section id="about">
+  <img src="美好時光-686.jpg" alt="[你老婆的名字] 的照片" />
+  <p>我是許立懿，是臨床心理師、嬰幼兒睡眠顧問、也是三位孩子的媽媽。</p>
+  <p>曾在兒童臨床心理中心擔任心理師，具備嬰幼兒發展評估、親職教養諮詢、以及孕產期/新手父母心理支持的專業知識，也在平時育兒的生活中，持續鍛鍊並累積正向親子互動的技能。期待幫助更多家庭建立健康的睡眠習慣。</p>
 
-    <div class="timeline-item" style="margin-top: 30px;">
-      <h3>臨床心理師（心理字第001477號）</h3>
+
+</section>
+
+  <section id="education">
+    <h2>專業證照／證書</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <p>好眠師（2025年認證班畢業學員）</p>
+      </div>
+      <div class="timeline-item">
+        <p>臨床心理師&nbsp;&nbsp;&nbsp;心理字第001477號</p>
+      </div>
     </div>
-
-    <div class="timeline-item" style="margin-top: 30px;">
-      <h3>好眠師</h3>
-    </div>
-
-    <img src="certificate.jpg" alt="證書" style="max-width: 300px; display: block; margin: 20px auto;" />
   </section>
 
   <section id="education">
     <h2>就學經歷</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>政治大學&nbsp;&nbsp;&nbsp;臨床心理學系碩士</h3>
+        <p>政治大學&nbsp;&nbsp;&nbsp;臨床心理學系碩士</p>
       </div>
       <div class="timeline-item">
-        <h3>政治大學&nbsp;&nbsp;&nbsp;心理學系學士</h3>
+        <p>政治大學&nbsp;&nbsp;&nbsp;心理學系學士</p>
       </div>
     </div>
   </section>
@@ -187,16 +202,16 @@
     <h2>工作經歷</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>社區校園機構&nbsp;&nbsp;&nbsp;心理衛生講座講師</h3>
+        <p>社區校園機構&nbsp;&nbsp;&nbsp;心理衛生講座講師</p>
       </div>
       <div class="timeline-item">
-        <h3>國立政治大學身心健康中心&nbsp;&nbsp;&nbsp;臨床心理師</h3>
+        <p>國立政治大學身心健康中心&nbsp;&nbsp;&nbsp;臨床心理師</p>
       </div>
       <div class="timeline-item">
-        <h3>台北馬偕醫院兒童心智科&nbsp;&nbsp;&nbsp;臨床心理師</h3>
+        <p>台北馬偕醫院兒童心智科&nbsp;&nbsp;&nbsp;臨床心理師</p>
       </div>
       <div class="timeline-item">
-        <h3>臺大醫院臨床心理中心&nbsp;&nbsp;&nbsp;臨床心理師</h3>
+        <p>臺大醫院臨床心理中心&nbsp;&nbsp;&nbsp;臨床心理師</p>
       </div>
     </div>
   </section>
@@ -243,26 +258,14 @@
     </div>
   </section>
 
-  <section id="case-experience">
-    <h2>個案經驗</h2>
-    <div class="card">
-      <h3>案例 A - 3 個月嬰兒睡眠改善</h3>
-      <p>透過科學睡眠訓練，成功讓寶寶晚上睡眠延長至 6 小時以上。</p>
-    </div>
-    <div class="card">
-      <h3>案例 B - 1 歲幼兒睡眠習慣建立</h3>
-      <p>幫助家長建立穩定的睡眠儀式，顯著改善孩子入睡困難問題。</p>
-    </div>
-  </section>
-
   <section id="feedback">
     <h2>家長回饋</h2>
     <div class="card">
-      <h3>小A媽媽 (2歲6個月)</h3>
+      <h3>小A媽媽 (寶貝2歲6個月)</h3>
       <p>我很感謝立懿願意輔導我們！因為對小孩睡眠習慣/能力倒退感到焦慮，原本他可以好好在床裡睡覺，突然間很排斥床。諮詢睡眠顧問時也擔心突然要讓小孩練習回到自己在床裡面睡覺，怕會讓他心理受創。但是立懿非常有耐心且願意給我們時間去跟小孩溝通，讓我安心很多！立懿也提供我非常多有用的方法跟小孩溝通，以及教我如何把孩子的睡覺環境安排得更安全。過程中小孩的接受度超過我跟先生預期的。現在孩子已經不會看到嬰兒床就崩潰，也可以在嬰兒床裡安心睡覺，就算醒來或是睡前有點情緒也不會要從床裡爬出來了！真的覺得很感動！</p>
     </div>
     <div class="card">
-      <h3>小S媽媽 (10個月)</h3>
+      <h3>小S媽媽 (寶貝10個月)</h3>
       <p>我曾經在寶寶六個月大時，自己嘗試讓他練習自主入睡，那一天成功入睡，但大人回房後大哭到大家都無法睡覺，最後只能抱起來安撫，又開始無止盡的哄睡。
 現在寶寶十個月大，從原本的小睡、夜晚長睡眠都需要有大人哄睡、陪睡、無法自行接覺跟夜醒5-6次，經過半個月的練習後，可以自己在嬰兒床自行入睡、無夜醒，我不需要再因為小孩睡在我身旁繃緊神經、或擔心大人不在時摔下床，也不會因為哄不睡小孩而生氣，現在我的寶寶有一個心情美麗的媽媽，非常感謝立懿的幫助！</p>
     </div>
@@ -271,30 +274,30 @@
   <section id="services">
     <h2>服務方案</h2>
     <div class="card">
-      <h3>初階睡眠諮詢</h3>
-      <p>提供睡眠習慣評估與個別建議，適合剛開始的家長。</p>
+      <h3>完整睡眠諮詢：分為兩周和三周方案</h3>
+      <p>適用於孩子矯正月齡滿4個月至3歲內，有夜醒、哄睡依賴、睡太少、作息不規律等任何睡眠問題</p>
     </div>
     <div class="card">
-      <h3>完整睡眠訓練方案</h3>
-      <p>包含多階段跟進及客製化方案，確保孩子持續改善睡眠品質。</p>
+      <h3>單次諮詢：嬰幼兒睡眠習慣建立</h3>
+      <p>適用於想初步瞭解睡眠概念的父母</p>
+    </div>
+    <div class="card">
+      <h3>單次諮詢：新生兒諮詢</h3>
+      <p>適用於未滿4個月的嬰幼兒、或是孕產期的準爸媽</p>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>聯絡我</h2>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-      <label for="name">姓名</label>
-      <input type="text" id="name" name="name" required />
-      
-      <label for="email">電子郵件</label>
-      <input type="email" id="email" name="_replyto" required />
-      
-      <label for="message">訊息</label>
-      <textarea id="message" name="message" required></textarea>
-      
-      <button type="submit">送出</button>
-    </form>
-  </section>
+<section id="contact">
+  <h2>聯絡我</h2>
+  <div class="card">
+    <p>若您有興趣報名嬰幼兒睡眠諮詢，請填答此份
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfDZ2vfrW2FAAImaSL4j2Se4u1rerPPUP1iXPGqHQWshpV_kw/viewform?usp=header" target="_blank" style="color:#6a1b9a; font-weight:bold;">
+        「嬰幼兒睡眠諮詢單」
+      </a>，
+      並於填答後主動來信告知填答完畢（<a href="mailto:joyce130608@gmail.com">joyce130608@gmail.com</a>），我將會於三個工作天內與您聯繫！
+    </p>
+  </div>
+</section>
 
 </body>
 </html>
